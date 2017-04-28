@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hello</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			textarea.example {
+				width : calc(100% / 3) ;
+				left:10%;
+	        	top:50px;
+				background-color:#ccccff;
+				line-height: 150%;
+			}
+			textarea {
+				width : calc(100% / 3) ;
+				height: 7em;
+				right:10%;
+	        	top:50px;
+	        	position:absolute;
+				background-color:#ccccff;
+			}
+		</style>
+		<!--
+		<script type="text/javascript">
+		    function fGetElementById(){
+		        var motoObj=document.getElementById("motobox");
+		        var copyObj=document.getElementById("copybox");
+		        copyObj.innerHTML=motoObj.value;
+		    }
+		</script>
+		-->
+		<script src="static/brython.js"></script>
+		<script src="static/brython_stdlib.js"></script>
+	</head>
+
+	<body onload="brython()">
+		<script type="text/python" src="static/hello.py"></script>
+		<div class="main_area">
+			<form>
+				<input type="text" id="kw_ja" />
+				<input type="text" id="kw_en" />
+			    <a href="#" input type="button" id="submit_button" />ja_wikiを表示</a>
+			    
+				<p><textarea name="msg1" cols="30" rows="15" class="example" id="result1">
+					ここに日本語wiki
+				</textarea></p>
+
+				<p><textarea name="msg2" cols="30" rows="15" id="result2">
+					ここに英語wikiからの追加情報
+				</textarea></p>
+			</form>
+		</div>
+
+	</body>
+</html>
